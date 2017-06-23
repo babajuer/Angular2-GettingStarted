@@ -8,7 +8,7 @@ export class ProductListComponent {
 	pageTitle: string = 'Product List';
 	imageW: number = 30;
 	imageH: number = 30;
-
+	listFilter: string = 'cart';
 	showImage: boolean = true;
 
 	products: any[] = [
