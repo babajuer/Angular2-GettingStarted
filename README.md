@@ -1,4 +1,4 @@
-# test in APM-StartFBj folder
+# test in APMfbj folder
 # Angular2-Getting Started
 Materials for the ["Angular: Getting Started"](http://bit.ly/Angular2-GettingStarted) course on Pluralsight.
 
