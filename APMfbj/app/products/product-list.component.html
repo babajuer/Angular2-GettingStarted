@@ -45,7 +45,13 @@
 						<td>{{ product.productCode | lowercase}}</td>	
 						<td>{{ product.productDate}}</td>	
 						<td>{{ product.price |currency:'USD':true:'1.2-2'}}      </td>	
-						<td>{{ product.starRating }} </td>	
+						<td>
+							{{ product.starRating}}
+							<ai-star 
+								[rating]='product.starRating'
+								(ratingClicked) = 'doRatingClicked($event)'
+								></ai-star>
+						</td>	
 					</tr>		
                 </tbody>
             </table>
