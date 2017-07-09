@@ -11,10 +11,9 @@ export class ProductListComponent implements OnInit {
 	pageTitle: string = 'Product List';
 	imageW: number = 30;
 	imageH: number = 30;
-	listFilter: string = 'cart';
-    listFilter2: string = 'fbj';
+	listFilter: string ;
     products: IProduct[];
-
+    errorMessage: string;
 	showImage: boolean = true;
     constructor(
         private _productService: ProductService
@@ -22,10 +21,6 @@ export class ProductListComponent implements OnInit {
 
     }
 
-test( event: string ) {
-    console.log(`gagag:`, event);
-    this.listFilter2= this.listFilter;
-}
 	toggleShowImage(): void {
 		this.showImage = !this.showImage;
 	};
@@ -35,7 +30,8 @@ test( event: string ) {
 	};
 
 	ngOnInit(): void {
-	    this.products = this._productService.getProduct();
-		console.log('ngoninit.');
+	    this._productService.getProduct()
+            .subscribe(products => this.products = products,
+                        error => this.errorMessage = <any>error);
 	}
  }
