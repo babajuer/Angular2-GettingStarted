@@ -8,9 +8,17 @@
 		<div class='row'>
 			<div class='col-md-2'>Filter by:</div>
 			<div class='col-md-4'>
-				<input type='text' [(ngModel)]= 'listFilter' />
+				111<input type='text' [(ngModel)]= 'listFilter' 
+				(ngModelChange)="test(fbj.value)"/>
 			</div>
 		</div>
+<div class='row'>
+	<div class='col-md-2'>Filter by:</div>
+	<div class='col-md-4'>
+		222<input type='text' [(ngModel)]= 'listFilter2' #fbj/>
+	</div>
+</div>
+
 		<div class='row' *ngIf='listFilter'>
             <div class='col-md-6'>
                 <h3>Filtered by: {{listFilter}} </h3>
