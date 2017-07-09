@@ -8,14 +8,15 @@ import { ProductService } from './products/product.service';
 		<h3>
 		{{pageTItle}}
 		</h3>
-
 		<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<ul class="nav">
-			<li><a [routerLink]="['/welcome']">welcome</a></li>
-			<li><a [routerLink]="['/products']">products</a></li>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a [routerLink]="['/welcome']">welcome</a></li>
+				<li><a [routerLink]="['/products']">products</a></li>
 			</ul>
-		</div>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
 		</nav>
 
 		<router-outlet></router-outlet>
