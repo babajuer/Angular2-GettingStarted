@@ -8,8 +8,17 @@ import { ProductService } from './products/product.service';
 		<h3>
 		{{pageTItle}}
 		</h3>
-		 
-		<pm-productList></pm-productList>
+
+		<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<ul class="nav">
+			<li><a [routerLink]="['/welcome']">welcome</a></li>
+			<li><a [routerLink]="['/products']">products</a></li>
+			</ul>
+		</div>
+		</nav>
+
+		<router-outlet></router-outlet>
 
 	`,
 	providers: [ ProductService ]

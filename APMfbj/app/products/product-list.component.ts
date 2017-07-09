@@ -3,7 +3,7 @@ import { IProduct } from './product';
 import { ProductService} from './product.service';
 
 @Component({
-    selector: 'pm-productList',
+    // selector: 'pm-productList',
     templateUrl: 'app/products/product-list.component.html'
 })
 export class ProductListComponent implements OnInit {
